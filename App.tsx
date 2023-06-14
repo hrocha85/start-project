@@ -1,7 +1,7 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
-import { useFonts, JosefinSlab_400Regular } from '@expo-google-fonts/josefin-slab'
-import { Routes } from './src/routes';
+import { JosefinSlab_400Regular, useFonts } from '@expo-google-fonts/josefin-slab';
+import { StyleSheet, Text } from 'react-native';
+import StackComponent from './src/routes/stack';
+import TabComponent from './src/routes/tab';
 
 export default function App() {
   const [fontsLoaded] = useFonts({
@@ -14,12 +14,7 @@ export default function App() {
     )
   }
 
-  return (
-    <>
-      <Routes />
-      <StatusBar style="auto" />
-    </>
-  );
+  return <TabComponent />;
 }
 
 const styles = StyleSheet.create({
